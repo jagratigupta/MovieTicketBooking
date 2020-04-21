@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>SignUp Page</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="http://cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.0/css/bootstrapValidator.min.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="main.css">
+  <style>
+    body{
+    background: orange;
+    max-height: 25%;
+    }
+    .back{font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; color:white; padding-left:20px; }
+    .regform{background-color: chocolate; margin: 0px 500px 100px 500px; height: auto;}
+    footer {
+      background-color: gold;
+      color: white;
+      padding: 15px;
+    }
+  </style>
+ 
+  </head>
+  <body>
+    
+  <div class="back">
+  <h2>MOVIE TICKET BOOKING</h2>   
+  <h4 style="margin-top:-8px;">online movie ticket booking system</h4>   
+  </div>
+  <nav class="navbar navbar" style="background-color:yellow;">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>                       
+            </button>
+            
+          </div>
+          <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+              <li><a href="#">ABOUT</a></li>
+              <li><a href="index.html">HOME</a></li>
+              <li><a href="allMovies.html">ALL MOVIES</a></li>
+              <li><a href="buyticket.jsp">BOOK TICKETS</a></li>
+              <li class="active"><a href="#">REGISTER</a></li>
+              <li><a href="login.html">LOGIN</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+            </ul>
+          </div>
+        </div>
+ </nav>
+ <div class="regform" >
+    <div class="container " style="height:500px;">
+     <h4 style="color:white;"><strong>REGISTRATION FORM</strong></h4>
+     <!-- signup.java onsubmit="return validateform()"-->
+     <form name="myform" action="SignupServlet" method="post">
+              <div class="form-group">
+                <label for="exampleInputName">Name*</label>
+                <input class="form-control item" type="text" placeholder="Enter name" name="name" maxlength="15" minlength="4" required="" style="width:25%;">
+               </div>
+              <div class="form-group">
+                <label for="exampleInputEmail1">Email address*</label>
+                <input type="email" class="form-control" placeholder="Enter email" name="email" required="" style="width:25%;">
+              </div>
+              <div class="form-group">
+                    <label for="exampleInputMobile">Mobile* </label>
+                    <input type="text" class="form-control" placeholder="Enter mobile no" name="mobile" pattern="[1-9]{1}[0-9]{9}" required="" style="width:25%;">
+                  </div>
+              <div class="form-group">
+                <label for="exampleInputPassword1">Password*</label>
+                <input type="password" class="form-control" placeholder="Password" name="password" minlength="6" id="password" required style="width:25%;">
+              </div>
+              <div class="form-group">
+                    <label for="exampleInputCPassword1">Confirm Password*</label>
+                    <input type="password" class="form-control" placeholder="Confirm Password" name="cpass" minlength="6" id="cpassword" required style="width:25%;">
+              </div>
+              <button type="submit" class="btn btn-default">Submit</button>
+              <p class="change_link">
+		
+                  Not a member yet ?
+                <a href="login.html" >Sign In</a>
+	      </p>
+     </form>
+    </div>
+  </div>
+  <footer class="container-fluid text-center">
+      <p>Footer Text</p>
+  </footer>
+  </body>

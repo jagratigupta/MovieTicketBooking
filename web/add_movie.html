@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>add movie</title>
+        <link rel="stylesheet" href="style.css">
+        
+        <script type="text/javascript">
+   function func()
+   {
+   if(window.history.previous) 
+   {
+   window.navigate('admin_action.html');
+   }
+   }
+ function toast() {
+  var x = document.getElementById("snackbar");
+  x.className = "show";
+  setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+}
+
+   </script>
+    </head>
+    <body style="background-color:rgb(255, 0, 0);" onunload="func()">
+    <center>
+        <div class="atrcontainer" style="width:50%">
+        <div id="snackbar">Movie added successfully !</div>
+        <h1>Add Movie Details!</h1>
+        <form action="add_movie.jsp">
+        <p align="left">
+             Name: <input type="text" name="name">
+            <hr>
+              <p align="left">  Certificate: <input type="text" name="certificate">
+            <hr>
+               <p align="left"> Genre: <input type="text" name="genre">
+            <hr>    
+              <p align="left">  Duration: <input type="text" name="duration">
+            <hr>
+              <p align="left">  Director: <input type="text" name="director">
+            <hr>    
+              <p align="left">  Stars: <input type="text" name="stars">
+            <hr>
+               <p align="left"> Description: <input type="text" name="description"> 
+            <hr>
+            <input type="submit" value="ADD MOVIE" onclick="toast()"> 
+            
+        </form>
+        </div>
+    </center>
+    </body>
+</html>

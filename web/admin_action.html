@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Admin action</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <link rel="stylesheet" href="style.css">
+         <script type="text/javascript">
+   function func()
+   {
+   if(window.history.previous) 
+   {
+   window.navigate('admin_login.html');
+   }
+   }
+   </script>
+    </head>
+    <body style="background-color:rgb(255, 0, 0);" onunload="func()">
+    <center>
+        <div class="atrcontainer" style="width:50%">
+        <form action="add_movie.html">
+    <input type="submit" value="ADD MOVIE" />
+     </form>
+         <form action="movies_in_db.jsp">
+    <input type="submit" value="DELETE MOVIE" />
+     </form>
+        </div>
+        </center>
+    </body>
+</html>
